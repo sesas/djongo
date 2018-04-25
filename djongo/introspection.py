@@ -66,7 +66,7 @@ class DatabaseIntrospection(introspection.BaseDatabaseIntrospection):
 
     def get_table_description(self, cursor, table_name):
         colspecs = collections.defaultdict(lambda: dict(
-            types=collections.Counter(),
+            types=collections.Counter({str: 1}),
             specs=collections.defaultdict(int),
         ))
 
